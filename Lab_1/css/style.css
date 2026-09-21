@@ -1,0 +1,141 @@
+/* ==================================================================
+   RESET
+   ================================================================== */
+* { margin: 0; padding: 0; box-sizing: border-box; }
+
+html, body {
+    height: 100%;
+    font-family: 'Inter', -apple-system, sans-serif;
+    color: #3a3428;
+    background: #f7f1e6;
+}
+
+/* ==================================================================
+    PARALLAX SROLL
+   ================================================================== */
+.section-1, .section-2, .section-3, .section-4,
+.section-5, .section-6, .section-7 {
+    height: 100vh;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+
+    position: relative;
+    display: flex;
+    align-items: flex-end;
+}
+
+
+.section-1 { background-image: url(../image/IMG_3555.jpg); }
+.section-2 { background-image: url(../image/IMG_3556.jpg); }
+.section-3 { background-image: url(../image/IMG_3557.jpg); }
+.section-4 { background-image: url(../image/IMG_3558.jpg); }
+.section-5 { background-image: url(../image/IMG_3559.jpg); }
+.section-6 { background-image: url(../image/IMG_3560.jpg); }
+.section-7 { background-image: url(../image/IMG_3561.jpg); }
+
+
+.section-1::before, .section-2::before, .section-3::before,
+.section-4::before, .section-5::before, .section-6::before,
+.section-7::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(180deg, rgba(0,0,0,0) 55%, rgba(0,0,0,0.55) 100%);
+}
+
+/* ==================================================================
+   TITLE CAPTION 
+   ================================================================== */
+.caption {
+    position: absolute;
+    top: 42%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 100%;
+    text-align: center;
+    z-index: 2;
+}
+
+.caption-text {
+    font-family: 'Fraunces', Georgia, serif;
+    font-weight: 500;
+    font-size: clamp(2.2rem, 6vw, 4rem);
+    color: #fffdf8;
+    text-shadow: 0 4px 24px rgba(0,0,0,0.35);
+}
+
+.caption-sub {
+    display: block;
+    margin-top: 0.8rem;
+    font-family: 'Inter', sans-serif;
+    font-size: 1rem;
+    color: #fffdf8;
+    text-shadow: 0 2px 12px rgba(0,0,0,0.35);
+}
+
+/* ==================================================================
+   PER-SECTION CHAPTER LABEL + LINE
+   ================================================================== */
+.section-body {
+    position: relative;
+    z-index: 2;
+    padding: 3rem 8vw;
+    max-width: 620px;
+}
+
+.chapter-label {
+    font-family: 'Inter', sans-serif;
+    font-size: 0.8rem;
+    letter-spacing: 0.02em;
+    color: #f2b880;
+    margin-bottom: 0.6rem;
+}
+
+.section-body h2 {
+    font-family: 'Fraunces', Georgia, serif;
+    font-weight: 500;
+    font-size: clamp(1.6rem, 3.4vw, 2.4rem);
+    color: #fffdf8;
+    line-height: 1.2;
+    margin-bottom: 0.6rem;
+}
+
+/* ==================================================================
+   SECTION TEXT
+   ================================================================== */
+.section-text {
+    padding: 5rem 10vw;
+    background: #f7f1e6;
+    position: relative;
+    z-index: 3;
+}
+
+.section-text p {
+    font-family: 'Fraunces', Georgia, serif;
+    font-style: italic;
+    font-size: clamp(1.1rem, 2vw, 1.4rem);
+    max-width: 46ch;
+    color: #5c5546;
+    margin: 0 auto;
+    text-align: center;
+}
+
+
+/* ==================================================================
+   FLEXIBILITY 
+   ================================================================== */
+@media (max-width: 768px) {
+    .section-1, .section-2, .section-3, .section-4,
+    .section-5, .section-6, .section-7 {
+        background-attachment: scroll;
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .section-1, .section-2, .section-3, .section-4,
+    .section-5, .section-6, .section-7 {
+        background-attachment: scroll;
+    }
+}
