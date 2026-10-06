@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>The Power of Sequencing</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+    <div class="container">
+        <!-- Header -->
+        <header id="main-header">
+            <h1>The Power of Sequencing</h1>
+            <p id="instruction-text">Choose a narrative path.</p>
+        </header>
+
+        <!-- Selection Buttons -->
+        <div id="selection-screen" class="screen">
+            <button class="nav-choice-btn" id="seq1-choice-btn">Sequence 1: Burnout</button>
+            <button class="nav-choice-btn" id="seq2-choice-btn">Sequence 2: Growth</button>
+        </div>
+
+        <!-- Image Frame -->
+        <div id="story-screen" class="screen hidden">
+            <div class="story-card">
+                <h2 id="stage-title">Beginning</h2>
+                <div class="image-box">
+                    <img id="story-image" src="" alt="Story Stage Image">
+                </div>
+                <p id="dialogue-box" class="dialogue">Dialogue goes here...</p>
+                
+                <div class="story-controls">
+                    <button id="back-to-menu-btn" class="secondary-btn">← Back to Choices</button>
+                    <button id="next-step-btn" class="primary-btn">Next Step →</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="js/script.js"></script>
+</body>
+</html>
