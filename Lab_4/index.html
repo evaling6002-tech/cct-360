@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Lab 4</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <header>
+        <h1>Panel State</h1>
+    </header>
+
+    <main>
+        <!-- Controls -->
+        <section class="controls-panel">
+            <h2>Story Controls</h2>
+            <button id="toggle-switch-btn">Toggle Power Switch</button>
+            <button id="adventure-btn">Choose Adventure Path</button>
+            <p>Switch State: <span id="switch-status" class="false-state">OFF (false)</span></p>
+            <p>Chosen Path: <span id="path-status">None</span></p>
+        </section>
+
+        <!-- Panel State -->
+        <section id="comic-panel" class="panel default-state">
+            <div class="panel-header">
+                <h3>Panel 1: The Threshold</h3>
+            </div>
+            <div class="panel-content">
+                <p id="story-text">Welcome to the interactive web! Interact with the controls inside this panel.</p>
+            </div>
+        </section>
+    </main>
+
+    <script src="js/script.js"></script>
+</body>
+</html>
