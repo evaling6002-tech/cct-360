@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Electricity Panel Game</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <div class="game-container">
+        <h1>Household Electricity Panel</h1>
+        <p>Select an action to trigger a specific power state and outcome.</p>
+        
+        <!-- User Input -->
+        <div class="button-group">
+            <button id="boil-btn">Boil Water</button>
+            <button id="shower-btn">Take a Shower</button>
+            <button id="heat-btn">Open Heating System</button>
+        </div>
+        
+        <!-- Display State -->
+        <p>Current Power Level: <span id="level-display">0</span></p>
+
+        <!-- Outcome Panel -->
+        <div id="status-panel" class="state-zero">
+            <h2 id="status-title">System Idle</h2>
+            <p id="status-desc">Select an action above to start drawing power.</p>
+        </div>
+    </div>
+
+    <script src="js/script.js"></script>
+</body>
+</html>
