@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lab_5 - Sound-Reactive Media Gallery</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <header class="app-header">
+        <h1>Lab_5: Interactive Media</h1>
+        <p>My Hometown -- Shanghai</p>
+    </header>
+
+    <main class="container">
+        <!-- 9-Image Reactive Gallery Grid -->
+        <section class="gallery-section">
+            <div class="gallery-header">
+                <h2>Sound-Reactive Gallery</h2>
+                <div class="fx-selector">
+                    <label for="fxMode">Reactive Mode: </label>
+                    <select id="fxMode">
+                        <option value="pulse">Pulse & Scale</option>
+                        <option value="hue">Chromatic Hue Shift</option>
+                        <option value="glow">Glow & Depth</option>
+                        <option value="glitch">Glitch & Tilt</option>
+                    </select>
+                </div>
+            </div>
+
+            <div class="image-grid" id="imageGrid">
+                <!-- 9 Images matching folder setup: 1.jpg to 9.jpg / jpeg / webp -->
+                <div class="card"><img src="image/1.jpg" alt="Media 1" class="reactive-img"><div class="badge">01</div></div>
+                <div class="card"><img src="image/2.jpeg" alt="Media 2" class="reactive-img"><div class="badge">02</div></div>
+                <div class="card"><img src="image/3.webp" alt="Media 3" class="reactive-img"><div class="badge">03</div></div>
+                <div class="card"><img src="image/4.jpg" alt="Media 4" class="reactive-img"><div class="badge">04</div></div>
+                <div class="card"><img src="image/5.jpeg" alt="Media 5" class="reactive-img"><div class="badge">05</div></div>
+                <div class="card"><img src="image/6.jpeg" alt="Media 6" class="reactive-img"><div class="badge">06</div></div>
+                <div class="card"><img src="image/7.jpeg" alt="Media 7" class="reactive-img"><div class="badge">07</div></div>
+                <div class="card"><img src="image/8.jpg" alt="Media 8" class="reactive-img"><div class="badge">08</div></div>
+                <div class="card"><img src="image/9.jpg" alt="Media 9" class="reactive-img"><div class="badge">09</div></div>
+            </div>
+        </section>
+
+        <!-- Media Controls & Audio Analyzer Dashboard -->
+        <section class="controls-section">
+            <h2>Audio Engine & Controls</h2>
+            
+            <div class="player-controls">
+                <!-- HTML5 Audio Element -->
+                <audio id="audioPlayer" src="audio/Soundscape.mp3" preload="auto"></audio>
+                
+                <div class="button-group">
+                    <button id="playBtn" class="btn primary">Play Soundscape</button>
+                    <button id="micBtn" class="btn secondary">Toggle Microphone</button>
+                    <button id="synthBtn" class="btn outline">Synth Fallback Mode</button>
+                </div>
+
+                <div class="track-info">
+                    <span id="currentTime">00:00</span>
+                    <input type="range" id="seekBar" value="0" min="0" step="0.1">
+                    <span id="duration">00:00</span>
+                </div>
+
+                <div class="sliders-grid">
+                    <div class="control-group">
+                        <label for="volumeSlider">Volume</label>
+                        <input type="range" id="volumeSlider" min="0" max="1" step="0.01" value="0.8">
+                    </div>
+                    <div class="control-group">
+                        <label for="rateSlider">Playback Speed (<span id="rateVal">1.0x</span>)</label>
+                        <input type="range" id="rateSlider" min="0.5" max="2.0" step="0.1" value="1.0">
+                    </div>
+                    <div class="control-group">
+                        <label for="sensitivitySlider">Reactivity Sensitivity</label>
+                        <input type="range" id="sensitivitySlider" min="0.5" max="3.0" step="0.1" value="1.5">
+                    </div>
+                </div>
+            </div>
+
+            <div class="audio-metrics">
+                <div class="metric-bar">
+                    <span>Bass Response</span>
+                    <div class="progress"><div id="bassBar" class="fill"></div></div>
+                </div>
+                <div class="metric-bar">
+                    <span>Mid Response</span>
+                    <div class="progress"><div id="midBar" class="fill"></div></div>
+                </div>
+                <div class="metric-bar">
+                    <span>Treble Response</span>
+                    <div class="progress"><div id="trebleBar" class="fill"></div></div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <script src="js/script.js"></script>
+</body>
+</html>
