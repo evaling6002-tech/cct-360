@@ -1,0 +1,121 @@
+
+<!DOCTYPE html>
+<head>
+    <title>Live Currency Explorer</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+    <header>
+        <div class="logo">✦ CURRENCY LAB</div>
+        <span class="live-indicator">● LIVE DATA</span>
+    </header>
+
+    <main class="container">
+
+        <section class="hero">
+            <p class="eyebrow">GLOBAL FINANCE / EXCHANGE RATES</p>
+            <h1>Explore the world<br>of <span>currencies.</span></h1>
+            <p class="subtitle">
+                Discover international exchange rates
+                and convert currencies using live API data from Fixer.
+            </p>
+        </section>
+
+        <section class="info-bar">
+            <div>
+                <span class="small-label">BASE CURRENCY</span>
+                <h2>EUR €</h2>
+            </div>
+
+            <div>
+                <span class="small-label">DATA DATE</span>
+                <h2 id="data-date">Loading...</h2>
+            </div>
+
+            <button id="refresh-btn">↻ Refresh Rates</button>
+        </section>
+
+        <section class="rates-section">
+            <div class="section-heading">
+                <div>
+                    <p class="eyebrow">MARKET OVERVIEW</p>
+                    <h2>Exchange Rates</h2>
+                </div>
+                <span class="unit-label">1 EUR =</span>
+            </div>
+
+            <div id="rates-container" class="rates-grid">
+                <p class="loading">Fetching exchange rates...</p>
+            </div>
+        </section>
+
+        <section class="converter">
+            <p class="eyebrow">INTERACTIVE TOOL</p>
+            <h2>Currency Converter</h2>
+            <p class="subtitle">
+                Calculate the value of your money around the world.
+            </p>
+
+            <div class="converter-fields">
+
+                <div class="field">
+                    <label for="amount">AMOUNT</label>
+                    <input
+                        type="number"
+                        id="amount"
+                        value="100"
+                        min="0"
+                        step="any"
+                    >
+                </div>
+
+                <div class="field">
+                    <label for="from-currency">FROM</label>
+                    <select id="from-currency">
+                        <option value="EUR">EUR (€)</option>
+                        <option value="CAD">CAD ($)</option>
+                        <option value="USD">USD ($)</option>
+                        <option value="GBP">GBP (£)</option>
+                        <option value="JPY">JPY (¥)</option>
+                        <option value="CNY">CNY (¥)</option>
+                    </select>
+                </div>
+
+                <div class="swap-icon">→</div>
+
+                <div class="field">
+                    <label for="to-currency">TO</label>
+                    <select id="to-currency">
+                        <option value="CAD">CAD ($)</option>
+                        <option value="EUR">EUR (€)</option>
+                        <option value="USD">USD ($)</option>
+                        <option value="GBP">GBP (£)</option>
+                        <option value="JPY">JPY (¥)</option>
+                        <option value="CNY">CNY (¥)</option>
+                    </select>
+                </div>
+
+            </div>
+
+            <div class="result-box">
+                <p>YOUR CONVERTED AMOUNT</p>
+                <h2 id="result">Waiting for data...</h2>
+                <span id="conversion-detail">
+                    Enter an amount to get started.
+                </span>
+            </div>
+
+            <button id="convert-btn" class="convert-button">
+                Calculate Exchange →
+            </button>
+        </section>
+
+        <p id="status" class="status" aria-live="polite"></p>
+
+    </main>
+
+    <script src="js/script.js"></script>
+</body>
+</html>

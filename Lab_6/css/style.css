@@ -1,0 +1,309 @@
+
+/* GENERAL SETTINGS */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background: #101827;
+    color: #f4f6fa;
+    min-height: 100vh;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 25px 8%;
+    border-bottom: 1px solid #293448;
+}
+
+.logo {
+    font-size: 16px;
+    font-weight: bold;
+    letter-spacing: 2px;
+}
+
+.live-indicator {
+    color: #6ce0b0;
+    font-size: 12px;
+    letter-spacing: 1px;
+}
+
+.container {
+    max-width: 1050px;
+    margin: auto;
+    padding: 65px 25px;
+}
+
+/* HERO SECTION */
+.eyebrow {
+    color: #75aaff;
+    font-size: 11px;
+    font-weight: bold;
+    letter-spacing: 2px;
+    margin-bottom: 15px;
+}
+
+.hero h1 {
+    font-size: clamp(40px, 7vw, 65px);
+    line-height: 1.1;
+    margin-bottom: 20px;
+}
+
+.hero h1 span {
+    color: #75aaff;
+}
+
+.subtitle {
+    color: #9caabd;
+    line-height: 1.7;
+    max-width: 520px;
+}
+
+/* INFO BAR */
+.info-bar {
+    margin-top: 45px;
+    padding: 25px;
+    background: #1b293c;
+    border: 1px solid #30435d;
+    border-radius: 14px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.small-label {
+    color: #93a4ba;
+    font-size: 10px;
+    letter-spacing: 1.5px;
+}
+
+.info-bar h2 {
+    font-size: 20px;
+    margin-top: 8px;
+}
+
+button {
+    border: none;
+    cursor: pointer;
+    font-weight: bold;
+    transition: 0.25s;
+}
+
+#refresh-btn {
+    background: #75aaff;
+    color: #101827;
+    padding: 13px 20px;
+    border-radius: 8px;
+}
+
+#refresh-btn:hover,
+.convert-button:hover {
+    background: #a1c5ff;
+    transform: translateY(-2px);
+}
+
+/* EXCHANGE RATE CARDS */
+.rates-section {
+    margin-top: 65px;
+}
+
+.section-heading {
+    display: flex;
+    justify-content: space-between;
+    align-items: end;
+    margin-bottom: 25px;
+}
+
+.section-heading h2,
+.converter h2 {
+    font-size: 28px;
+}
+
+.unit-label {
+    color: #93a4ba;
+    font-size: 13px;
+}
+
+.rates-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 15px;
+}
+
+.rate-card {
+    background: #1b293c;
+    border: 1px solid #30435d;
+    border-radius: 12px;
+    padding: 25px;
+    transition: 0.25s;
+}
+
+.rate-card:hover {
+    border-color: #75aaff;
+    transform: translateY(-4px);
+}
+
+.currency-name {
+    color: #9caabd;
+    font-size: 12px;
+}
+
+.currency-code {
+    font-size: 23px;
+    margin: 10px 0;
+}
+
+.rate-value {
+    font-size: 20px;
+    color: #75aaff;
+    font-weight: bold;
+}
+
+.rate-bar {
+    height: 5px;
+    background: #34445a;
+    border-radius: 10px;
+    margin-top: 18px;
+    overflow: hidden;
+}
+
+.rate-bar span {
+    display: block;
+    height: 100%;
+    background: #75aaff;
+    border-radius: 10px;
+}
+
+.loading {
+    color: #9caabd;
+}
+
+/* CURRENCY CONVERTER */
+.converter {
+    margin-top: 75px;
+    padding: 35px;
+    background: #1b293c;
+    border: 1px solid #30435d;
+    border-radius: 16px;
+}
+
+.converter > .subtitle {
+    margin-top: 10px;
+    margin-bottom: 30px;
+}
+
+.converter-fields {
+    display: grid;
+    grid-template-columns: 1fr 1fr 35px 1fr;
+    align-items: end;
+    gap: 15px;
+}
+
+.field label {
+    display: block;
+    font-size: 10px;
+    letter-spacing: 1px;
+    color: #93a4ba;
+    margin-bottom: 10px;
+}
+
+.field input,
+.field select {
+    width: 100%;
+    padding: 14px;
+    background: #101827;
+    color: white;
+    border: 1px solid #3b4e68;
+    border-radius: 8px;
+    font-size: 14px;
+}
+
+.swap-icon {
+    text-align: center;
+    color: #75aaff;
+    font-size: 22px;
+    padding-bottom: 10px;
+}
+
+.result-box {
+    background: #101827;
+    padding: 25px;
+    border-radius: 10px;
+    margin-top: 30px;
+}
+
+.result-box p {
+    font-size: 10px;
+    letter-spacing: 1.5px;
+    color: #93a4ba;
+}
+
+.result-box h2 {
+    color: #75aaff;
+    font-size: 35px;
+    margin: 12px 0;
+    overflow-wrap: anywhere;
+}
+
+.result-box span {
+    font-size: 12px;
+    color: #9caabd;
+}
+
+.convert-button {
+    background: #75aaff;
+    color: #101827;
+    width: 100%;
+    padding: 16px;
+    margin-top: 20px;
+    border-radius: 8px;
+}
+
+/* STATUS AND FOOTER */
+.status {
+    color: #9caabd;
+    font-size: 12px;
+    margin-top: 20px;
+    text-align: center;
+    min-height: 18px;
+}
+
+footer {
+    border-top: 1px solid #293448;
+    padding: 30px 15px;
+    text-align: center;
+    color: #8291a6;
+    font-size: 11px;
+    line-height: 2;
+}
+
+/* MOBILE RESPONSIVENESS */
+@media (max-width: 650px) {
+    .rates-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .converter-fields {
+        grid-template-columns: 1fr;
+    }
+
+    .swap-icon {
+        transform: rotate(90deg);
+        padding: 0;
+    }
+
+    .converter {
+        padding: 22px;
+    }
+
+    .info-bar {
+        align-items: flex-start;
+    }
+}
